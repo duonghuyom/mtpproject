@@ -1,11 +1,11 @@
 import Image from "next/image";
-import logo from "../public/logo.png"
-import "./index.css"
-  
+import logo from "../../public/logo.png";
+import style from "./index.module.css";
+
 const Header = () => (
-    <div style={headerStyle}>
-        <Image alt="logo" src={logo.src}  width={100} height={50} layout="intrinsic" style={{position: "absolute"}} />
-    </div>
+  <div className={style.header}>
+    <Image alt="logo" src={logo.src} width={70} height={56} />
+  </div>
 );
-  
+
 export default Header;

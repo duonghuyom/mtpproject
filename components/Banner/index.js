@@ -9,9 +9,12 @@ import tiktok from "../../public/tiktok.svg";
 import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+
+SwiperCore.use([Autoplay]);
+SwiperCore.use([Pagination]);
 
 const Banner = () => {
   const pagination = {
@@ -19,25 +22,29 @@ const Banner = () => {
   };
 
   return (
-    <div>
-      <div>
-        <Swiper
-          pagination={pagination}
-          modules={[Pagination]}
-          className="mySwiper"
-          position="relative"
-        >
-          <SwiperSlide>
-            <Image src={banner1} alt="banner1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={banner2} alt="banner2" />
-          </SwiperSlide>
-        </Swiper>
-      </div>
+    <div className={styles.banner}>
+      <Swiper
+        pagination={pagination}
+        modules={[Pagination]}
+        className="mySwiper"
+        position="relative"
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        style={{ height: "calc(100vh - 98px)" }}
+      >
+        <SwiperSlide>
+          <Image src={banner1} alt="banner1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={banner2} alt="banner2" />
+        </SwiperSlide>
+      </Swiper>
 
-      <div style={{ bottom: "-60px", left: "40%" }}>
-        <button className={styles.buttonStyle}>SHOP NOW</button>
+      <div className={styles.buttondiv}>
+        <button className={styles.button}>SHOP NOW</button>
       </div>
 
       <div className={styles.socialMedia}>

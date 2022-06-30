@@ -5,27 +5,32 @@ import tshirt from "../../public/tshirt.png";
 
 const Collection = () => {
   return (
-    <div className={style.imageColumn}>
-      <div className={style.imageColumn}>
-        <h1>COLLECTION</h1>
-        <Image src={collection} alt="" width={400} height={400} />
+    <div styles={{ position: "relative" }}>
+      <div className={style.box}>
+        <div className={style.collection}>
+          <h1 className={style.heading}>COLLECTION</h1>
+          <div className={style.greenline}></div>
+        </div>
+        <div className={style.picture}>
+          <Image src={collection} alt="" height={372} width={372}></Image>
+        </div>
       </div>
-      <div
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          height: "150px",
-          marginTop: "10px",
-        }}
-      >
-        <h1 style={{ paddingTop: "30px" }}>
-          M-TP ENTERTAINMENT OFFICIAL STORE
-        </h1>
-        <h3>APPROVED BY M-TP ENTERTAINMENT</h3>
+
+      <div className={style.mtp1}>
+        <div className={style.mtp2}>
+          <h2>M-TP ENTERTAINMENT OFFICIAL STORE</h2>
+          <h4>APPROVED BY M-TP ENTERTAINMENT</h4>
+        </div>
       </div>
-      <div className={style.imageColumn}>
-        <h1>HOT ITEM</h1>
-        <Image src={tshirt} alt="" width={400} height={400} />
+
+      <div className={style.box}>
+        <div className={style.collection}>
+          <h1 className={style.heading}>HOT ITEM</h1>
+          <div className={style.greenline}></div>
+        </div>
+        <div className={style.picture}>
+          <Image src={tshirt} alt="" height={372} width={372}></Image>
+        </div>
       </div>
     </div>
   );

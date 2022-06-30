@@ -1,0 +1,50 @@
+.columnnew {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 80px 0;
+}
+
+.taiapp {
+  color: #0a0a0e;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.downloadhint {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #808890;
+  margin-bottom: 80px;
+}
+
+.picture {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+}
+
+.qr {
+  width: 140px;
+  height: 140px;
+  margin-left: 62px;
+}
+
+.iphone {
+  width: 363px;
+  max-width: 363px;
+}
